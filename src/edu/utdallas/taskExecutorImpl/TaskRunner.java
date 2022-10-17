@@ -3,32 +3,26 @@ package edu.utdallas.taskExecutorImpl;
 import edu.utdallas.taskExecutor.BlockingFifo;
 import edu.utdallas.taskExecutor.Task;
 
-public class TaskRunner implements Runnable
-{
-BlockingFifo Fifo;
-boolean stopGo = true;
+public class TaskRunner implements Runnable {
+	BlockingFifo Fifo;
+	boolean stopGo = true;
 
-public TaskRunner(BlockingFifo Fifo) 
-{
-	this.Fifo = Fifo;
-}
+	// Constructor
+	public TaskRunner(BlockingFifo Fifo) {
+		this.Fifo = Fifo;
+	}
 
-public void run()
-{
-	while(stopGo)
-	{
-		
-		
-		try
-		{
-			Task doer = Fifo.take();
-			doer.execute();
-		}
-		catch(Throwable th)
-		{
-			System.out.println(th + ": ERROR");
+	// takes from fifo and runs
+	public void run() {
+		while (stopGo) {
+
+			// tries to take from fifo and run it
+			try {
+				Task doer = Fifo.take();
+				doer.execute();
+			} catch (Throwable th) {
+				System.out.println(th + ": ERROR");
+			}
 		}
 	}
-}
-
 }
