@@ -1,4 +1,6 @@
-package edu.utdallas.taskExecutor;
+package edu.utdallas.blockingFifo;
+
+import edu.utdallas.taskExecutor.Task;
 
 public class BlockingFifo{
 

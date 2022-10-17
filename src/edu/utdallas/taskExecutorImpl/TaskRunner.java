@@ -1,6 +1,6 @@
 package edu.utdallas.taskExecutorImpl;
 
-import edu.utdallas.taskExecutor.BlockingFifo;
+import edu.utdallas.blockingFifo.BlockingFifo;
 import edu.utdallas.taskExecutor.Task;
 
 public class TaskRunner implements Runnable {

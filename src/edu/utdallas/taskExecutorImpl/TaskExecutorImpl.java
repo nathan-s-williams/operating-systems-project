@@ -1,8 +1,8 @@
 package edu.utdallas.taskExecutorImpl;
 
+import edu.utdallas.blockingFifo.BlockingFifo;
 import edu.utdallas.taskExecutor.Task;
 import edu.utdallas.taskExecutor.TaskExecutor;
-import edu.utdallas.taskExecutor.BlockingFifo;
 
 public class TaskExecutorImpl implements TaskExecutor {
 	// array holding threads
